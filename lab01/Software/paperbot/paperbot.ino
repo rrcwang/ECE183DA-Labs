@@ -58,8 +58,8 @@ int servo_right_ctr = 90;
 
 
 // WiFi AP parameters
-char ap_ssid[13];
-char* ap_password = "";
+char ap_ssid[13] = "not a robot";
+char* ap_password = "askyourselfnospaces";
 
 // WiFi STA parameters
 char* sta_ssid = 

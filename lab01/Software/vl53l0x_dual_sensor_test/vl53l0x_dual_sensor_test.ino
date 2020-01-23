@@ -8,7 +8,7 @@
  * startup guide on CCLE for more information
  */
 #include <Wire.h>
-#include <VL53L0X.h>
+#include "VL53L0X.h"
 
 #define SDA_PORT 14
 #define SCL_PORT 12
@@ -75,11 +75,12 @@ void setup()
 
 void loop()
 {
-  Serial.print("Lidar 1 range(mm): ");
+  //Serial.print("Lidar 1 range(mm): ");
   Serial.print(sensor.readRangeSingleMillimeters());
+  Serial.print(" \t");
   if (sensor.timeoutOccurred()) { Serial.print(" TIMEOUT"); }
   
-  Serial.print("  Lidar 2 range(mm): ");
+  //Serial.print("  Lidar 2 range(mm): ");
   Serial.println(sensor2.readRangeSingleMillimeters());
   if (sensor.timeoutOccurred()) { Serial.println(" TIMEOUT"); }
 }
