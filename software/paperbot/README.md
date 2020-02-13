@@ -20,23 +20,17 @@
 
 #### ESP8266FS tool
 - To install, create "tools" folder in Arduino, download, and unzip. See 
-- https://github.com/esp8266/arduino-esp8266fs-plugin
+- https://github.com/esp8266/Arduino/blob/master/doc/filesystem.md#uploading-files-to-file-system
 
 ### Hardware: 
 - NodeMCU Amica DevKit Board (ESP8266 chip)
 - Motorshield for NodeMCU 
 - 2 continuous rotation servos plugged into motorshield pins D1, D2
-- Ultra-thin power bank (available at https://www.amazon.com/dp/B076HJTNYJ)
+- Ultra-thin power bank (available at https://www.amazon.com/dp/B01B2IQL42)
 - Paper chassis (see below)
 
-Black lines: cut / 
-Blue lines: mountain fold / 
-Red lines: valley fold
+Red lines: cut / 
+Blue dotted lines: mountain fold / 
+Green dotted lines: valley fold
 ![Paper chassis](/paperbot.svg "Paper chassis")
-
-#### Assembly
-
-Here's a video demonstrating how to fold the chassis:
-
-![Folding the chassis](folding.mp4)
 

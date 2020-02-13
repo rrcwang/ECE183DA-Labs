@@ -2,14 +2,14 @@
 <html>
 <head>
   <meta charset=utf-8 />
-  <title>whooo control robots</title>
+  <title>tim lee is cool</title>
 
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 
 <body>
-  <h1>Yay Robots!</h1>
+  <h1>Rootin Tootin Robots!</h1>
 
   <table width="100%">
     <tr>
@@ -42,6 +42,7 @@
     </tr>
   </table>
 
+<!--
   <table class=wslog> <tr>
       <td width="50%" valign="top">
         <div id="wsRx" class="log"></div>
@@ -50,6 +51,11 @@
         <div id="wsTx" class="log"></div>
       </td>
   </tr></table>
+-->
+
+  <textarea id ="wsRx" class="wslog" rows = "50" readonly> </textarea>
+
+  <textarea id ="wsTx" class="wslog" rows = "50" readonly> </textarea>
 
   <script>
     /* Handle button / slider clicks + touches */
@@ -104,9 +110,12 @@
     var wsRx = document.getElementById("wsRx");
     var wsTx = document.getElementById("wsTx");
     function rxLog(text) {
-      wsRx.innerHTML = text + wsRx.innerHTML.split("<br>").slice(0, 4).join("<br>") ;
+      // text is affixed to the end since we want data to be printed sequentially
+      wsRx.innerHTML = wsRx.innerHTML.split("<br>").slice(0, 4).join("<br>") + text;
+      wsRx.scrollTop = wsRx.scrollHeight;
     }
     function txLog(text) {
+      // don't care about this but didn't want to delete it
       wsTx.innerHTML = text + wsTx.innerHTML.split("<br>").slice(0, 4).join("<br>") ;
     }
 
@@ -125,8 +134,7 @@
       txLog(text);
     };
     connection.onmessage = function(e){
-      var timeStr = new Date().toLocaleTimeString();
-      var text = "(" + timeStr + ") : RX = " + e.data + "<br>";
+      var text = e.data + "&#10;";
       console.log('Server: ', e.data);
       rxLog(text);
     };
