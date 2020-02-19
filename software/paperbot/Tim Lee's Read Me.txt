@@ -1,0 +1,17 @@
+hello, to use this interface:
+
+open sketch in arduino and try compiling, if it says some file doesnt exist go to Sketch > add file and do it manually
+
+After uploading the arduino sketch you also have to update the html/css files by hitting Tools > ESPxx Sketch Data Upload
+
+when the robot turns on wait for the humming to stop, thats the boot sequence i believe
+
+connect to the espXX wifi (pw = "askyourselfnospaces")
+
+go to your web browser and type in 192.168.4.1
+
+if the css doesn't load just expand the left most textbox using the drag icon in the lower right
+
+hit the heart button in the middle to start/stop data transmission
+
+ez sensor data
