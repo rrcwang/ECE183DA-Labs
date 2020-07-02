@@ -14,12 +14,16 @@ we can iterate through the Kalman filter step as follows:
 Import `paperbot_simulation.py` and call the following functions in order to run the state estimator. Call the file directly to run a simulated example.
 
 ## Initialize
-SE = StateEstimator()
+`SE = StateEstimator()`
 
-## Dynamics propagation, function returns a priori estimate and auxilliary information to account for distances from sensor to walls
-SE.dynamics_propagation(input)
-## Measurement update, function returnsa posteriori estimate
-SE.measurement_update(measurement)
+## Dynamics propagation
+`SE.dynamics_propagation(input)`
+Function returns a priori estimate and auxilliary information to account for distances from sensor to walls
 
-Repeat this data for the next
-SE.get_state_val()
+## Measurement update
+`SE.measurement_update(measurement)`
+Function returns a posteriori estimate
+
+## Get the most current estimate
+`SE.get_state_val()`
+Returns the current state estimate and a boolean who's truth value indicates whether the state estimate is a priori.
