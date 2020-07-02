@@ -3,15 +3,13 @@
 This is an implementation of the Extended Kalman Filter.
 
 paperbot_simulation.py contains the following declarations:
-    class State(xp,yp,theta,theta_dot)
-    class StateEstimator(xp,yp,theta,theta_dot)
-
-
-    For n samples of input of size 2 and n samples of measurement data of size 4,
-we can iterate through the Kalman filter step as follows:
+    'class State(xp,yp,theta,theta_dot)'
+    'class StateEstimator(xp,yp,theta,theta_dot)'
 
 # Instructions
 Import `paperbot_simulation.py` and call the following functions in order to run the state estimator. Call the file directly to run a simulated example.
+
+For n samples of input of size 2 and n samples of measurement data of size 4, we can iterate through the Kalman filter step as follows:
 
 ## Initialize
 `SE = StateEstimator()`
